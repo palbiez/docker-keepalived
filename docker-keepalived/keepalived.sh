@@ -15,6 +15,10 @@ fi
 /bin/sed -i "s/{{CHECK_SCRIPT}}/${CHECK_SCRIPT}/g" /etc/keepalived/keepalived.conf
 /bin/sed -i "s/{{VRID}}/${VRID}/g" /etc/keepalived/keepalived.conf
 /bin/sed -i "s/{{INTERFACE}}/${INTERFACE}/g" /etc/keepalived/keepalived.conf
+/bin/sed -i "s/{{IPADDRESS}}/${IPADDRESS}/g" /etc/keepalived/keepalived.conf
+/bin/sed -i "s/{{HOSTIP1}}/${HOSTIP1}/g" /etc/keepalived/keepalived.conf
+/bin/sed -i "s/{{HOSTIP2}}/${HOSTIP2}/g" /etc/keepalived/keepalived.conf
+/bin/sed -i "s/{{HOSTIP3}}/${HOSTIP3}/g" /etc/keepalived/keepalived.conf
 
 # Make sure we react to these signals by running stop() when we see them - for clean shutdown
 # And then exiting

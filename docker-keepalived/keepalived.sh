@@ -10,6 +10,7 @@ if [[ -z ${CHECK_SCRIPT} ]]; then
 fi
 
 # Substitute variables in config file.
+/bin/sed -i "s/{{HOSTNAME}}/${HOSTNAME}/g" /etc/keepalived/keepalived.conf
 /bin/sed -i "s/{{VIRTUAL_IP}}/${VIRTUAL_IP}/g" /etc/keepalived/keepalived.conf
 /bin/sed -i "s/{{VIRTUAL_MASK}}/${VIRTUAL_MASK}/g" /etc/keepalived/keepalived.conf
 /bin/sed -i "s/{{CHECK_SCRIPT}}/${CHECK_SCRIPT}/g" /etc/keepalived/keepalived.conf

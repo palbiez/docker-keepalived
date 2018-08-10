@@ -3,12 +3,17 @@ keepalived:
   labels:
     io.rancher.scheduler.global: 'true'
   environment:
-    - VIRTUAL_IP=172.17.8.150
+    - HOSTNAME=rancherworker
+    - VIRTUAL_IP=10.0.2.29
     - VIRTUAL_MASK=24
     - CHECK_IP=any
-    - CHECK_PORT=80
+    - CHECK_PORT=6443
     - VRID=150
     - INTERFACE=eth0
+    - IPADDRESS=10.0.1.20
+    - HOSTIP1=10.0.2.19
+    - HOSTIP2=10.0.1.21
+    - HOSTIP3=10.0.1.22
   tty: true
   build: docker-keepalived
   stdin_open: true
